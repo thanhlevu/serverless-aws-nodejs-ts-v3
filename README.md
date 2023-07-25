@@ -1,7 +1,14 @@
-# Serverless - AWS Node.js Typescript Version 2
+# Serverless - AWS Node.js Typescript with SDK v3
 
 Serverless Framework template for zero-config TypeScript support.
-In this version of the template there is no `aws-sdk` npm package as it is recommended to use modular [version 3 of aws-sdk](https://github.com/aws/aws-sdk-js-v3) instead.
+This template includes an example code to create / get / update / delete a product.
+Some build-in dependencies:
+- @aws-sdk/client-dynamodb
+- @aws-sdk/util-dynamodb
+- aws-lambda
+- aws-sdk
+- uuid
+- zod
 
 ## Features
 
@@ -24,7 +31,7 @@ To create new serverless AWS TypeScript project using this template run:
 
 ```bash
 serverless create \
---template-url https://github.com/ttarnowski/serverless-aws-nodejs-typescript-v2/tree/main \
+--template-url https://github.com/thanhlevu/serverless-aws-nodejs-ts-v3/tree/main \
 --path myServiceName
 ```
 
@@ -46,6 +53,18 @@ or:
 
 ```
 yarn
+```
+
+To run project offline:
+
+```
+serverless offline
+```
+
+To deploy:
+
+```
+serverless deploy
 ```
 
 ## Licence
